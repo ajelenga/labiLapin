@@ -1,4 +1,4 @@
-# labiLapin
+# LabiLapin
 
 Jeu basé sur le principe d'un lapin qui passe dans plusieurs Labyrinthe pour au final avoir une carotte.
 
