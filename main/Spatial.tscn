@@ -132,7 +132,6 @@ transform = Transform( 60, 0, 0, 0, 0.1, 0, 0, 0, 190, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="murs" type="Spatial" parent="."]
-visible = false
 
 [node name="mur5" type="StaticBody" parent="murs"]
 transform = Transform( 0.3, 0, 0, 0, 3, 0, 0, 0, 10, -5.13587, 2.95133, -170.166 )
@@ -232,7 +231,7 @@ mesh = SubResource( 4 )
 material/0 = SubResource( 11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="murs/mur3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 2.22045e-16, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, -9.09495e-13, 0, 1, 0, 1.11022e-16, 0, 1, 0, 0, -0.1992 )
 shape = SubResource( 5 )
 
 [node name="mur77" type="StaticBody" parent="murs"]
@@ -2958,6 +2957,9 @@ fov = 112.376
 
 [node name="lapin3D" type="RigidBody" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.19938, 1.16542, -187.496 )
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 script = ExtResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="lapin3D"]
@@ -3029,4 +3031,5 @@ mesh = SubResource( 14 )
 material/0 = SubResource( 22 )
 
 [node name="CollisionShape" type="CollisionShape" parent="lapin3D"]
+transform = Transform( 2.03609, 0, -4.52889e-08, 0, 1, 0, -4.52889e-08, 0, 1, 0, 0, 0 )
 shape = SubResource( 13 )
