@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://musicjeux.mp3" type="AudioStream" id=1]
 [ext_resource path="res://pick Up.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lapin3d.gd" type="Script" id=3]
+[ext_resource path="res://Spatial.gd" type="Script" id=4]
 
 [sub_resource type="PhysicsMaterial" id=2]
 
@@ -118,6 +119,7 @@ albedo_color = Color( 0.572549, 0.458824, 0.458824, 1 )
 [sub_resource type="BoxShape" id=13]
 
 [node name="Spatial" type="Spatial"]
+script = ExtResource( 4 )
 
 [node name="plateau" type="StaticBody" parent="."]
 transform = Transform( 1.00551, 0, 0, 0, 1.00551, 0, 0, 0, 1.00551, 0, 0, 0 )
@@ -3054,3 +3056,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1887, 0.756091, -186.891 )
 
 [node name="Pick Up4" parent="Collectibles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39608, 0.756093, -169.506 )
+
+[node name="Score" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="Score"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 85.0
+margin_bottom = 39.0
+text = "Score : 0"

@@ -9,7 +9,7 @@ albedo_color = Color( 0.870588, 0.639216, 0.192157, 1 )
 
 [sub_resource type="BoxShape" id=3]
 
-[node name="Pick Up" type="Area"]
+[node name="Pick Up" type="Area" groups=["Pick Up"]]
 script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
