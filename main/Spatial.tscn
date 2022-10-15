@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://murs.gd" type="Script" id=1]
+[ext_resource path="res://Lapin3d.gd" type="Script" id=3]
 
 [sub_resource type="PhysicsMaterial" id=2]
 
@@ -88,6 +88,10 @@ shader = SubResource( 10 )
 
 [sub_resource type="BoxShape" id=5]
 
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="BoxShape" id=13]
+
 [node name="Spatial" type="Spatial"]
 
 [node name="plateau" type="StaticBody" parent="."]
@@ -105,7 +109,6 @@ transform = Transform( 60, 0, 0, 0, 0.1, 0, 0, 0, 190, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="murs" type="Spatial" parent="."]
-script = ExtResource( 1 )
 
 [node name="mur5" type="StaticBody" parent="murs"]
 transform = Transform( 0.3, 0, 0, 0, 3, 0, 0, 0, 10, -5.13587, 2.95133, -170.166 )
@@ -2928,3 +2931,14 @@ shape = SubResource( 5 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 7.10543e-15, -8.74228e-08, -7.02018e-08, 0.595959, 0.803015, 5.21004e-08, 0.803015, -0.595959, -1.98716, 19.8435, -206.178 )
 fov = 112.376
+
+[node name="lapin3D" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.19938, 1.16542, -187.496 )
+script = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="lapin3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="lapin3D"]
+shape = SubResource( 13 )
