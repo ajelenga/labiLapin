@@ -1,5 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
+[ext_resource path="res://musicjeux.mp3" type="AudioStream" id=1]
+[ext_resource path="res://pick Up.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Lapin3d.gd" type="Script" id=3]
 
 [sub_resource type="PhysicsMaterial" id=2]
@@ -2951,16 +2953,13 @@ material/0 = SubResource( 11 )
 [node name="CollisionShape" type="CollisionShape" parent="murs/mur81"]
 shape = SubResource( 5 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, 7.10543e-15, -8.74228e-08, -7.02018e-08, 0.595959, 0.803015, 5.21004e-08, 0.803015, -0.595959, -1.98716, 19.8435, -206.178 )
-fov = 112.376
-
 [node name="lapin3D" type="RigidBody" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.19938, 1.16542, -187.496 )
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 script = ExtResource( 3 )
+speed = 1.0
 
 [node name="MeshInstance" type="MeshInstance" parent="lapin3D"]
 transform = Transform( 2.09878, 0, 0, 0, 0.792819, 0, 0, 0, 1, 0, 0, 0 )
@@ -3033,3 +3032,25 @@ material/0 = SubResource( 22 )
 [node name="CollisionShape" type="CollisionShape" parent="lapin3D"]
 transform = Transform( 2.03609, 0, -4.52889e-08, 0, 1, 0, -4.52889e-08, 0, 1, 0, 0, 0 )
 shape = SubResource( 13 )
+
+[node name="Camera" type="Camera" parent="lapin3D"]
+transform = Transform( 1.15235e-07, 0.575019, -0.81814, -5.02698e-08, 0.81814, 0.575019, 1, -2.51346e-08, 1.23184e-07, -8.19853, 11.0634, -0.00928926 )
+fov = 77.7996
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+
+[node name="Collectibles" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+
+[node name="Pick Up" parent="Collectibles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29227, 0.756091, -186.891 )
+
+[node name="Pick Up2" parent="Collectibles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.2464, 0.756091, -186.891 )
+
+[node name="Pick Up3" parent="Collectibles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1887, 0.756091, -186.891 )
+
+[node name="Pick Up4" parent="Collectibles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39608, 0.756093, -169.506 )
