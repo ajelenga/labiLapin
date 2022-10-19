@@ -20,7 +20,7 @@ AudioStreamPlayer2d="*res://AudioStreamPlayer2D.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/fast_fur_skin/plugin.cfg", "res://addons/low_poly_terrain/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/fast_fur_skin/plugin.cfg", "res://addons/low_poly_terrain/plugin.cfg", "res://addons/zylann.treegen/plugin.cfg" )
 
 [gui]
 

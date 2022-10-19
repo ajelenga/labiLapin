@@ -12,7 +12,7 @@
 
 [sub_resource type="PhysicsMaterial" id=2]
 
-[sub_resource type="PlaneMesh" id=61]
+[sub_resource type="PlaneMesh" id=72]
 size = Vector2( 60, 500 )
 
 [sub_resource type="ShaderMaterial" id=42]
@@ -501,7 +501,7 @@ physics_material_override = SubResource( 2 )
 
 [node name="LowpolyTerrainHeighmap" type="MeshInstance" parent="plateau"]
 transform = Transform( 2.02115, 0, 0, 0, 0.99255, 0, 0, 0, 0.768561, 0.0153572, 0, 0 )
-mesh = SubResource( 61 )
+mesh = SubResource( 72 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 58 )
 script = ExtResource( 5 )
