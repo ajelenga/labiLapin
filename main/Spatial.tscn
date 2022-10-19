@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://grass 1.jpg" type="Texture" id=1]
 [ext_resource path="res://pick Up.tscn" type="PackedScene" id=2]
@@ -12,7 +12,7 @@
 
 [sub_resource type="PhysicsMaterial" id=2]
 
-[sub_resource type="PlaneMesh" id=61]
+[sub_resource type="PlaneMesh" id=72]
 size = Vector2( 60, 500 )
 
 [sub_resource type="ShaderMaterial" id=42]
@@ -403,6 +403,95 @@ albedo_color = Color( 0.572549, 0.458824, 0.458824, 1 )
 
 [sub_resource type="BoxShape" id=13]
 
+[sub_resource type="CylinderMesh" id=62]
+
+[sub_resource type="VisualShaderNodeColorConstant" id=63]
+
+[sub_resource type="VisualShader" id=64]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(1.000000, 1.000000, 1.000000);
+	float n_out2p1 = 1.000000;
+
+// Output:0
+	ALBEDO = n_out2p0;
+	ALPHA = n_out2p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( 14.25, 0 )
+nodes/fragment/0/position = Vector2( 1100, 80 )
+nodes/fragment/2/node = SubResource( 63 )
+nodes/fragment/2/position = Vector2( 680, 120 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 2, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=65]
+shader = SubResource( 64 )
+
+[sub_resource type="VisualShaderNodeColorConstant" id=66]
+constant = Color( 1, 0, 0, 1 )
+
+[sub_resource type="VisualShader" id=67]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(1.000000, 0.000000, 0.000000);
+	float n_out2p1 = 1.000000;
+
+// Output:0
+	ALBEDO = n_out2p0;
+	ALPHA = n_out2p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( 14.25, 0 )
+nodes/fragment/0/position = Vector2( 1000, 140 )
+nodes/fragment/2/node = SubResource( 66 )
+nodes/fragment/2/position = Vector2( 560, 160 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 2, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=68]
+shader = SubResource( 67 )
+
+[sub_resource type="ConvexPolygonShape" id=69]
+points = PoolVector3Array( 1, 1, 0, 1, -1, 0, 0.995106, 1, -0.0980814, 0.995106, 1, 0.0978857, 0.995106, -1, 0.0978857, 0.995106, -1, -0.0980814, 0.980619, 1, -0.195184, 0.980619, 1, 0.194988, 0.980619, -1, 0.194988, 0.980619, -1, -0.195184, 0.95693, 1, -0.290329, 0.95693, 1, 0.290133, 0.95693, -1, 0.290133, 0.95693, -1, -0.290329, 0.923845, 1, -0.382733, 0.923845, 1, 0.382537, 0.923845, -1, 0.382537, 0.923845, -1, -0.382733, 0.881754, 1, -0.471417, 0.881754, 1, 0.471222, 0.881754, -1, 0.471222, 0.881754, -1, -0.471417, 0.831441, 1, -0.555599, 0.831441, 1, 0.555403, 0.831441, -1, 0.555403, 0.831441, -1, -0.555599, 0.772905, 1, -0.634495, 0.772905, 1, 0.634299, 0.772905, -1, 0.634299, 0.772905, -1, -0.634495, 0.70693, 1, -0.707126, 0.70693, 1, 0.70693, 0.70693, -1, 0.70693, 0.70693, -1, -0.707126, 0.634299, 1, -0.773101, 0.634299, 1, 0.772905, 0.634299, -1, 0.772905, 0.634299, -1, -0.773101, 0.555403, 1, -0.831637, 0.555403, 1, 0.831441, 0.555403, -1, 0.831441, 0.555403, -1, -0.831637, 0.471222, 1, -0.88195, 0.471222, 1, 0.881754, 0.471222, -1, 0.881754, 0.471222, -1, -0.88195, 0.382537, 1, -0.924041, 0.382537, 1, 0.923845, 0.382537, -1, 0.923845, 0.382537, -1, -0.924041, 0.290133, 1, -0.957126, 0.290133, 1, 0.95693, 0.290133, -1, 0.95693, 0.290133, -1, -0.957126, 0.194988, 1, -0.980814, 0.194988, 1, 0.980619, 0.194988, -1, 0.980619, 0.194988, -1, -0.980814, 0.0978857, 1, -0.995301, 0.0978857, 1, 0.995106, 0.0978857, -1, 0.995106, 0.0978857, -1, -0.995301, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, -1, -1, -0.0980814, 1, -0.995301, -0.0980814, 1, 0.995106, -0.0980814, -1, 0.995106, -0.0980814, -1, -0.995301, -0.195184, 1, -0.980814, -0.195184, 1, 0.980619, -0.195184, -1, 0.980619, -0.195184, -1, -0.980814, -0.290329, 1, -0.957126, -0.290329, 1, 0.95693, -0.290329, -1, 0.95693, -0.290329, -1, -0.957126, -0.382733, 1, -0.924041, -0.382733, 1, 0.923845, -0.382733, -1, 0.923845, -0.382733, -1, -0.924041, -0.471417, 1, -0.88195, -0.471417, 1, 0.881754, -0.471417, -1, 0.881754, -0.471417, -1, -0.88195, -0.555599, 1, -0.831637, -0.555599, 1, 0.831441, -0.555599, -1, 0.831441, -0.555599, -1, -0.831637, -0.634495, 1, -0.773101, -0.634495, 1, 0.772905, -0.634495, -1, 0.772905, -0.634495, -1, -0.773101, -0.707126, 1, -0.707126, -0.707126, 1, 0.70693, -0.707126, -1, 0.70693, -0.707126, -1, -0.707126, -0.773101, 1, -0.634495, -0.773101, 1, 0.634299, -0.773101, -1, 0.634299, -0.773101, -1, -0.634495, -0.831637, 1, -0.555599, -0.831637, 1, 0.555403, -0.831637, -1, 0.555403, -0.831637, -1, -0.555599, -0.88195, 1, -0.471417, -0.88195, 1, 0.471222, -0.88195, -1, 0.471222, -0.88195, -1, -0.471417, -0.924041, 1, -0.382733, -0.924041, 1, 0.382537, -0.924041, -1, 0.382537, -0.924041, -1, -0.382733, -0.957126, 1, -0.290329, -0.957126, 1, 0.290133, -0.957126, -1, 0.290133, -0.957126, -1, -0.290329, -0.980814, 1, -0.195184, -0.980814, 1, 0.194988, -0.980814, -1, 0.194988, -0.980814, -1, -0.195184, -0.995301, 1, -0.0980814, -0.995301, 1, 0.0978857, -0.995301, -1, 0.0978857, -0.995301, -1, -0.0980814, -1, 1, 0, -1, -1, 0 )
+
+[sub_resource type="CubeMesh" id=70]
+
+[sub_resource type="ConvexPolygonShape" id=71]
+points = PoolVector3Array( 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1 )
+
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 4 )
 
@@ -412,7 +501,7 @@ physics_material_override = SubResource( 2 )
 
 [node name="LowpolyTerrainHeighmap" type="MeshInstance" parent="plateau"]
 transform = Transform( 2.02115, 0, 0, 0, 0.99255, 0, 0, 0, 0.768561, 0.0153572, 0, 0 )
-mesh = SubResource( 61 )
+mesh = SubResource( 72 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 58 )
 script = ExtResource( 5 )
@@ -3537,3 +3626,30 @@ text = "You win ! "
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0750657, -0.4213, 0.90381, 0, 0.906367, 0.422492, -0.997179, -0.0317146, 0.0680371, 0, 69.092, 0 )
 shadow_enabled = true
+
+[node name="panneau" type="StaticBody" parent="."]
+transform = Transform( 2.11996, 0, 0, 0, 0.00193564, -2.11561, 0, 0.0301694, 0.135735, -54.9168, 10.4451, 143.644 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="panneau"]
+mesh = SubResource( 62 )
+material/0 = SubResource( 65 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="panneau"]
+transform = Transform( 0.933269, 0, 0, 0, 0.999726, 0.298999, 0, 6.08042e-05, 0.933542, 0, 0, 0 )
+mesh = SubResource( 62 )
+material/0 = SubResource( 68 )
+
+[node name="CollisionShape" type="CollisionShape" parent="panneau"]
+shape = SubResource( 69 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="panneau"]
+transform = Transform( 0.0932215, 0, 0, 0, 1.00358, -3.90835, 0, -0.000794799, 1.8687, 0, -4.46045, 2.84645 )
+mesh = SubResource( 70 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="panneau"]
+transform = Transform( 0.00277366, -0.000469817, 0.5135, 0.418366, 0.995962, 4.41201, -0.092989, 0.000897224, 0.0193533, 0, 8.28705, 0.0131149 )
+mesh = SubResource( 70 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="panneau"]
+transform = Transform( 0.0932215, 0, 0, 0, 1.00358, -3.90835, 0, -0.000794799, 1.8687, 0, -4.46045, 2.84645 )
+shape = SubResource( 71 )
