@@ -422,7 +422,7 @@ Terrain/MaxHeight = 2.0
 Terrain/HeightMap = null
 
 [node name="CollisionShape" type="CollisionShape" parent="plateau"]
-transform = Transform( 2.02115, 0, 0, 0, 0.99255, 0, 0, 0, 0.768561, -1.79815, 0, 0 )
+transform = Transform( 2.02115, 0, 0, 0, 0.99255, 0, 0, 0, 0.768561, 0.0899962, 0, 0 )
 shape = SubResource( 60 )
 
 [node name="FastFurGrassSelective2" type="Spatial" parent="plateau"]
