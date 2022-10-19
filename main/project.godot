@@ -18,6 +18,10 @@ config/icon="res://icon.png"
 
 AudioStreamPlayer2d="*res://AudioStreamPlayer2D.tscn"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/fast_fur_skin/plugin.cfg", "res://addons/low_poly_terrain/plugin.cfg" )
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
