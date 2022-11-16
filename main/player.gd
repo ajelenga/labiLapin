@@ -55,9 +55,9 @@ func _physics_process(delta):
 	
 	$Mesh.rotation.y = lerp_angle($Mesh.rotation.y, atan2(direction.x,direction.z), delta * angular_acceleration)
 	
-	$Status/Label.text = "direction : " + String(direction)
-	$Status/Label2.text = "direction.length() : " + String(direction.length())
-	$Status/Label3.text = "velocity : " + String(velocity)
-	$Status/Label4.text = "velocity.length() : " + String(velocity.length())
+	#$Status/Label.text = "direction : " + String(direction)
+	#$Status/Label2.text = "direction.length() : " + String(direction.length())
+	#$Status/Label3.text = "velocity : " + String(velocity)
+	#$Status/Label4.text = "velocity.length() : " + String(velocity.length())
 
 	
