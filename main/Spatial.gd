@@ -11,6 +11,8 @@ func _ready():
 func _on_Pick_Up_captured():
 	score +=1
 	$Score/Label.text = "Score : %s" % score
+	$SfxrStreamPlayer.play()
+	
 	
 	if score_max == score:
 		$Score/MessageFin.show()

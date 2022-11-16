@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://musicjeux.mp3" type="AudioStream" id=1]
+[ext_resource path="res://burghrecords__birds-singing-forest-scotland.mp3" type="AudioStream" id=1]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
 position = Vector2( 2, 2 )

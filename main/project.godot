@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "SfxrGenerator",
+"language": "GDScript",
+"path": "res://addons/godot_sfxr/SfxrGenerator.gd"
+}, {
+"base": "Object",
+"class": "SfxrGlobals",
+"language": "GDScript",
+"path": "res://addons/godot_sfxr/SfxrGlobals.gd"
+}, {
+"base": "Object",
+"class": "SfxrStreamPlayerInterface",
+"language": "GDScript",
+"path": "res://addons/godot_sfxr/SfxrStreamPlayerInterface.gd"
+} ]
+_global_script_class_icons={
+"SfxrGenerator": "",
+"SfxrGlobals": "",
+"SfxrStreamPlayerInterface": ""
+}
+
 [application]
 
 config/name="Main"
@@ -20,7 +42,7 @@ AudioStreamPlayer2d="*res://AudioStreamPlayer2D.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/fast_fur_skin/plugin.cfg", "res://addons/low_poly_terrain/plugin.cfg", "res://addons/zylann.treegen/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/fast_fur_skin/plugin.cfg", "res://addons/godot_sfxr/plugin.cfg", "res://addons/low_poly_terrain/plugin.cfg", "res://addons/zylann.treegen/plugin.cfg" )
 
 [gui]
 
