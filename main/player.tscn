@@ -256,4 +256,3 @@ transform = Transform( 0.993097, 0.116944, -0.00904388, -0.109056, 0.948991, 0.2
 [node name="Camera" type="ClippedCamera" parent="Camroot/h/v"]
 transform = Transform( -0.922901, -0.207721, -0.324201, -0.382412, 0.592652, 0.708891, 0.0448865, 0.778214, -0.626394, -4.80456, 6.16576, -5.99117 )
 fov = 83.2
-process_mode = 1

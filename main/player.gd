@@ -39,7 +39,7 @@ func _physics_process(delta):
 					0,
 					Input.get_action_strength("forward") - Input.get_action_strength("backward")).rotated(Vector3.UP,h_rot).normalized()
 		if Input.is_action_pressed("sprint"):
-					movement_speed = run_speed
+					movement_speed = run_speed*4
 		else:
 			movement_speed = walk_speed
 	else:
