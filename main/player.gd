@@ -21,7 +21,7 @@ var roll_magnitude = 17
  
 func _input(event):
 	if event is InputEventKey:
-		if event.as_text() == "Z" || event.as_text() == "Q" || event.as_text() == "S" || event.as_text() == "D" || event.as_text() == "Space":
+		if event.as_text() == "up" || event.as_text() == "left" || event.as_text() == "down" || event.as_text() == "right" || event.as_text() == "Space":
 			if event.pressed:
 				get_node("Status/" + event.as_text()).color = Color("ff6666")
 			else:
