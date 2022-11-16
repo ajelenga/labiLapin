@@ -1,7 +1,7 @@
 extends Spatial
 
 var score = 0
-var score_max
+var score_max = 16
 func _ready():
 	var pickups= get_tree().get_nodes_in_group("Pick Up")
 	for pickup in pickups:
@@ -13,5 +13,6 @@ func _on_Pick_Up_captured():
 	$Score/Label.text = "Score : %s" % score
 	
 	if score_max == score:
-		$Score/MessageFin.show() 
+		$Score/MessageFin.show()
+
 
