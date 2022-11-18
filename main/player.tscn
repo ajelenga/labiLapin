@@ -143,6 +143,7 @@ transform = Transform( -4.6169e-08, 0, 1.51745, 0, 1.50752, 0, -4.47374, 0, -2.8
 shape = SubResource( 86 )
 
 [node name="Status" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
