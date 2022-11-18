@@ -61,3 +61,8 @@ func _physics_process(delta):
 	#$Status/Label4.text = "velocity.length() : " + String(velocity.length())
 
 	
+
+
+func _on_enemy_body_entered(body):
+	if body.name=="player":
+		get_tree().change_scene("res://Control.tscn")

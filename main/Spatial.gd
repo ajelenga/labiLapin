@@ -16,5 +16,6 @@ func _on_Pick_Up_captured():
 	
 	if score_max == score:
 		$Score/MessageFin.show()
+		get_tree().reload_current_scene()
 
 

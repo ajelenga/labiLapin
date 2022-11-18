@@ -17,3 +17,7 @@ func _ready():
 
 func on_Button_pressed():
 	$SfxrStreamPlayer.play_sfx()
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Spatial.tscn")
