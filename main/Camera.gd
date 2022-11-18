@@ -6,10 +6,10 @@ var camrot_v = 0
 var cam_v_min = -10
 var cam_v_max = 50
 
-var h_sensitivity = 0.1
-var v_sensitivity = 0.1
-var h_acceleration = 3
-var v_acceleration = 3
+var h_sensitivity = 0.01
+var v_sensitivity = 0.01
+var h_acceleration = 1
+var v_acceleration = 1
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
